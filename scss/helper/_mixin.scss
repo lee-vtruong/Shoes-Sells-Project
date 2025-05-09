@@ -1,0 +1,79 @@
+@mixin styleBTN(
+  $bg-color,
+  $text-color,
+  $hover-bg,
+  $hover-text: $text-color,
+
+  $radius: 10px,
+  $font-size: 1rem
+) {
+  background-color: $bg-color;
+  color: $text-color;
+
+  border: none;
+  border-radius: $radius;
+  font-weight: 600;
+  font-size: $font-size;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-text;
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@mixin styleSpan($right, $transformX, $transformY) {
+  position: absolute;
+  z-index: 99;
+  bottom: 0px;
+  right: $right;
+  transform: translate($transformX, $transformY);
+}
+@mixin styleBTNCart($bg-color, $text-color, $hover-bg, $hover-text) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $hover-bg;
+    color: black;
+  }
+}
+
+@mixin styleHoverImg($size) {
+  overflow: hidden;
+  img {
+    transition: all 0.3s;
+  }
+  &:hover img {
+    width: 100%;
+    transform: scale($size);
+  }
+}
+@mixin stylebtnmobile($fs, $px, $py, $bgcl, $cl, $bgclhover) {
+  font-size: $fs;
+  padding: $px $py;
+  background-color: $bgcl;
+  border-radius: 5px;
+  color: $cl;
+  transition: all 0.3s;
+  &:hover {
+    color: black;
+    background-color: $bgclhover;
+  }
+}
+
+@mixin btnColor($cl) {
+  background-color: $cl;
+  border-radius: 100%;
+  padding: 10px;
+  margin-right: 20px;
+}

@@ -1,0 +1,139 @@
+@import "./../helper/mixin";
+@import "./../helper/variable";
+// css detail
+.banner-detail {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  img {
+    height: 200px;
+    object-fit: cover;
+
+    filter: grayscale(70%) blur(2px);
+  }
+  .banner-item {
+    position: relative;
+  }
+  .banner-details-title {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s;
+      &:hover {
+        color: #fbbf18;
+      }
+    }
+  }
+}
+
+// detailProducts
+.detailProducts {
+  margin: $top 0;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  align-items: center;
+
+  .detailProducts-left {
+    .detailProducts-left-item {
+      .slick-image {
+      }
+      @include styleHoverImg(1);
+    }
+    margin-top: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .detailProducts-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    h3 {
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 12px;
+      font-weight: bold;
+      &:nth-child(3) {
+        font-size: 25px;
+      }
+      span {
+        margin-left: 10px;
+        color: #fbbf18;
+        font-size: 40px;
+      }
+      &:nth-child(4) {
+        font-size: 20px;
+      }
+    }
+
+    .btn-green {
+      @include btnColor(green);
+    }
+    .btn-blue {
+      @include btnColor(blue);
+    }
+    .btn-red {
+      @include btnColor(red);
+    }
+  }
+  .detailProducts-like {
+    margin-top: 40px;
+    text-align: center;
+    button {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      @include styleBTN($color-bg-btn, white, $color-bg-btn-hover, black);
+    }
+    .like {
+      a {
+        text-decoration: none;
+        color: black;
+        i {
+          margin-right: 10px;
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+    }
+    .number {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .input-group {
+        justify-content: center;
+        align-items: center;
+
+        input {
+          &.form-control {
+            margin-bottom: 20px;
+            width: 100px;
+            outline: none;
+            padding: 9px 15px;
+          }
+        }
+      }
+    }
+  }
+  .detailProducts-ship {
+    margin-top: 20px;
+  }
+  .detailProducts-pay {
+    margin-top: 45px;
+  }
+}

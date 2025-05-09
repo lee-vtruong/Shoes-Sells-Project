@@ -1,0 +1,40 @@
+header {
+  .navbar {
+    padding: 30px 0;
+    .navbar-toggler-icon {
+      background-color: white;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  .navbar-brand {
+    color: $color-bg-btn;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .btn-header {
+    button {
+      width: fit-content;
+      @include styleBTNCart($color-bg-btn, white, $color-bg-btn-hover, black);
+    }
+  }
+  .dropdown-menu {
+    background-color: black;
+    position: absolute;
+    transform: translateX(-13%);
+    transition: all 0.3s;
+    width: 100vw;
+    h4 {
+      color: $color-bg-btn-hover;
+    }
+    a {
+      color: white;
+      transition: all 0.3s;
+      &:hover {
+        color: #fbbf18;
+      }
+    }
+  }
+}

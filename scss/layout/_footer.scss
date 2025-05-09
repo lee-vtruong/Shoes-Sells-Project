@@ -1,0 +1,25 @@
+footer {
+  h1 {
+    font-weight: bold;
+    color: $color-bg-btn;
+    text-transform: uppercase;
+  }
+  h6 {
+    font-weight: bold;
+    color: #fbbf18;
+    text-transform: uppercase;
+  }
+  .footer-body {
+    .list-unstyled {
+      li {
+        a {
+          color: white;
+          transition: all 0.3s;
+          &:hover {
+            color: #fbbf18;
+          }
+        }
+      }
+    }
+  }
+}
