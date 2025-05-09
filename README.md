@@ -131,3 +131,6 @@ If you'd like to contribute to this project, please follow these steps:
 -   The Cyberlearn API for providing product data.
 
 ---
+## Team members
+- Lê Văn Trường
+- Hồng Phúc
